@@ -1,0 +1,56 @@
+/* item style */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 310px;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.item-img {
+  border-radius: 5px;
+}
+
+.item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.item-text {
+  color: #000;
+  font-size: 20px;
+  text-align: left;
+}
+
+.item-save-btn {
+  border-color: #d63384;
+  color: #d63384;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.item-save-btn:hover {
+  background-color: #d63384;
+  color: white;
+  border-color: #cccccc;
+}
+
+.item-time {
+  border-radius: 10px;
+  background-color: #fde8eb;
+  color: #d63384;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0px 10px;
+  margin-right: auto;
+  margin-left: 8px;
+  margin-top: 5px;
+}
