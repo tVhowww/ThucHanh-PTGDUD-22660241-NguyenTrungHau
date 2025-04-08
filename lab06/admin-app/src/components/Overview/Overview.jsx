@@ -8,7 +8,7 @@ function Overview() {
     const fetchData = async () => {
       try {
         const res = await import("../../data/data.json");
-        setOverview(res.default.overview);
+        setOverview(res.default.overviews);
       } catch (error) {
         console.error(error);
       }

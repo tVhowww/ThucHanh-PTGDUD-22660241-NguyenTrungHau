@@ -1,0 +1,57 @@
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td,
+.p-datatable {
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #ebe7e7 !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  /* border-bottom: none !important; */
+}
+
+th.center-header .p-column-header-content {
+  justify-content: center !important;
+}
+
+.header-custom {
+  font-size: "14px";
+  font-weight: bold;
+  color: #777;
+}
+
+/* Header */
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Body row hover */
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #fef0f5;
+}
+
+/* Nền khi đã chọn */
+.p-checkbox-box.p-highlight {
+  background-color: #f44b87 !important;
+  border-color: #f44b87 !important;
+}
+
+/* Dấu tick */
+.p-checkbox-box.p-highlight .p-checkbox-icon {
+  color: #fff !important;
+}
+
+/* Row được chọn */
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background-color: #fef0f5 !important;
+}
+
+/* Pagination */
+.p-datatable .p-paginator .p-paginator-page.p-highlight {
+  background-color: #f44b87 !important;
+  border-color: #f44b87 !important;
+  color: #fff !important;
+}

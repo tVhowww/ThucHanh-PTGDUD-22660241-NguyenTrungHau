@@ -5,6 +5,7 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import OverviewItem from "./components/OverviewItem/OverviewItem";
 import Overview from "./components/Overview/Overview";
+import DetailedReport from "./components/DetailedReport/DetailedReport";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +14,8 @@ function App() {
     <>
       {/* <Layout /> */}
       {/* <OverviewItem /> */}
-      <Overview />
+      {/* <Overview /> */}
+      <DetailedReport />
     </>
   );
 }
