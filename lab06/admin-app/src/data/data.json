@@ -83,5 +83,44 @@
             "status": "completed",
             "avatar": "../src/assets/imgs/customer-6.png"
         }
+    ],
+
+    "menu": [
+        {
+            "id": 1,
+            "path": "/dashboard",
+            "title": "Dashboard",
+            "icon": "../src/assets/imgs/menu-dashboard.png"
+        },
+        {
+            "id": 2,
+            "path": "/projects",
+            "title": "Project",
+            "icon": "../src/assets/imgs/menu-projects.png"
+        },
+        {
+            "id": 3,
+            "path": "/teams",
+            "title": "Teams",
+            "icon": "../src/assets/imgs/menu-teams.png"
+        },
+        {
+            "id": 4,
+            "path": "/analytics",
+            "title": "Analytics",
+            "icon": "../src/assets/imgs/menu-analytics.png"
+        },
+        {
+            "id": 5,
+            "path": "/messages",
+            "title": "Messages",
+            "icon": "../src/assets/imgs/menu-messages.png"
+        },
+        {
+            "id": 6,
+            "path": "/integrations",
+            "title": "Integrations",
+            "icon": "../src/assets/imgs/menu-integrations.png"
+        }
     ]
 }

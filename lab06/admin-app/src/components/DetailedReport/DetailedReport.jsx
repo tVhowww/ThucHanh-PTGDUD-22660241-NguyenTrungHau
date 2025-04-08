@@ -74,7 +74,12 @@ export default function DetailedReport() {
       <DataTable
         value={customers}
         paginator
-        paginatorLeft
+        // paginatorLeft
+        paginatorLeft={
+          <span className="text-sm text-[#333] ml-2">
+            {customers.length} results
+          </span>
+        }
         rows={6}
         selection={selectedCustomers}
         onSelectionChange={(e) => setSelectedCustomers(e.value)}
