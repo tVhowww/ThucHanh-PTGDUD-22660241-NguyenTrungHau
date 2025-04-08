@@ -8,8 +8,11 @@ import Overview from "./components/Overview/Overview";
 import DetailedReport from "./components/DetailedReport/DetailedReport";
 import Menu from "./components/Menu/Menu";
 
+import useRouteElements from "./routes/useRouteElements";
+import Header from "./components/Header/Header";
+
 function App() {
-  const [count, setCount] = useState(0);
+  const element = useRouteElements();
 
   return (
     <>
@@ -17,7 +20,9 @@ function App() {
       {/* <OverviewItem /> */}
       {/* <Overview /> */}
       {/* <DetailedReport /> */}
-      <Menu />
+      {/* <Header /> */}
+      {/* <Menu /> */}
+      {element}
     </>
   );
 }
