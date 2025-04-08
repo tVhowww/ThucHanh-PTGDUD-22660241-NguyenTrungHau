@@ -19,7 +19,7 @@ function Overview() {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-4 p-4">
+      <div className="flex flex-wrap gap-4 my-4">
         {overview.map((item, index) => (
           <OverviewItem key={index} {...item} />
         ))}

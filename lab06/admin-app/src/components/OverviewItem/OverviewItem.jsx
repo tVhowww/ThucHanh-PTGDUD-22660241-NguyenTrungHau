@@ -1,5 +1,4 @@
 import React from "react";
-import { MdOutlineShoppingCart } from "react-icons/md";
 
 function OverviewItem(overviewItem) {
   return (

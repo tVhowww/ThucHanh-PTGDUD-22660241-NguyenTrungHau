@@ -2,10 +2,19 @@ import React, { useState, useEffect } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import "./DetailedReport.css";
+import EditModal from "../Modal/EditModal";
 
 export default function DetailedReport() {
   const [customers, setCustomers] = useState([]);
   const [selectedCustomers, setSelectedCustomers] = useState([]);
+  const [editingCustomer, setEditingCustomer] = useState(null);
+
+  const handleSaveCustomer = (updatedCustomer) => {
+    const updatedList = customers.map((c) =>
+      c.id === updatedCustomer.id ? updatedCustomer : c
+    );
+    setCustomers(updatedList);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,7 +70,7 @@ export default function DetailedReport() {
   const actionBodyTemplate = (rowData) => {
     return (
       <button
-        onClick={() => console.log("Edit:", rowData)}
+        onClick={() => setEditingCustomer(rowData)}
         className="cursor-pointer hover:bg-amber-50 px-4 py-2 rounded-sm duration-200"
       >
         <img src="../src/assets/imgs/create.png" alt="edit" />
@@ -70,11 +79,11 @@ export default function DetailedReport() {
   };
 
   return (
-    <div className="p-[2rem] rounded-2 mb-[1rem]">
+    <div className="my-[1rem]">
       <DataTable
         value={customers}
+        size="small"
         paginator
-        // paginatorLeft
         paginatorLeft={
           <span className="text-sm text-[#333] ml-2">
             {customers.length} results
@@ -85,14 +94,16 @@ export default function DetailedReport() {
         onSelectionChange={(e) => setSelectedCustomers(e.value)}
         dataKey="id"
         // rowsPerPageOptions={[6, 10, 25, 50]}
-        tableStyle={{ minWidth: "50rem" }}
+        tableStyle={{
+          minWidth: "50rem",
+          border: "1px solid #eee",
+        }}
       >
         <Column
           selectionMode="multiple"
           headerStyle={{ width: "3rem" }}
           exportable={false}
-          style={{ textAlign: "center" }}
-          headerClassName=""
+          style={{ textAlign: "center", paddingInline: "30px" }}
         ></Column>
         <Column
           field="name"
@@ -115,7 +126,7 @@ export default function DetailedReport() {
         <Column
           field="orderValue"
           header="ORDER VALUE"
-          style={{ width: "15%", textAlign: "left" }}
+          style={{ width: "20%", textAlign: "left" }}
           headerClassName=" header-custom"
         ></Column>
 
@@ -144,6 +155,13 @@ export default function DetailedReport() {
           headerStyle={{ color: "transparent" }}
         />
       </DataTable>
+      {editingCustomer && (
+        <EditModal
+          customer={editingCustomer}
+          onClose={() => setEditingCustomer(null)}
+          onSave={handleSaveCustomer}
+        />
+      )}
     </div>
   );
 }

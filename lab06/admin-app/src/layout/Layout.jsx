@@ -6,7 +6,7 @@ import Menu from "../components/Menu/Menu";
 function Layout() {
   return (
     <div className="flex">
-      <aside className="w-[300px] bg-white shadow-sm">
+      <aside className="w-[250px] bg-white shadow-sm">
         <Menu />
       </aside>
 
