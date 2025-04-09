@@ -92,6 +92,15 @@
       "status": "in_progress",
       "orderDateDisplay": "12/04/2025",
       "id": "7"
+    },
+    {
+      "id": "8",
+      "name": "Nguyễn Trung Hậu",
+      "company": "AvatarSystem",
+      "orderValue": "$555",
+      "orderDate": "10/04/2025",
+      "status": "new",
+      "avatar": "../src/assets/imgs/avatar-user.png"
     }
   ],
   "menu": [

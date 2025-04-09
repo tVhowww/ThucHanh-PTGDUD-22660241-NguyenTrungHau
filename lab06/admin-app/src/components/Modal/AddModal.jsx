@@ -27,6 +27,14 @@ function AddModal({ toggle }) {
     }));
   };
 
+  // chuyển từ yyyy-MM-dd -> dd/MM/yyyy
+  const convertToDisplayDateFormat = (dateStr) => {
+    if (!dateStr) return "";
+    if (dateStr.split("/").length > 1) return dateStr;
+    const [year, month, day] = dateStr.split("-");
+    return `${day}/${month}/${year}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -45,6 +53,7 @@ function AddModal({ toggle }) {
         id: String(maxId + 1),
         ...formData,
         avatar: avatarUrl,
+        orderDate: convertToDisplayDateFormat(formData.orderDate),
       };
 
       await customerApi.create(newCustomer);
