@@ -18,7 +18,7 @@ function Header() {
       case "/integrations":
         return "Integrations";
       default:
-        return "";
+        return "Home";
     }
   };
   const title = getTitleFromPath(location.pathname);

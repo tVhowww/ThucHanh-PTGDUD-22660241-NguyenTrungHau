@@ -52,7 +52,7 @@ export default function DetailedReport() {
         <img
           src={rowData.avatar}
           alt={rowData.name}
-          className=" rounded-full object-cover"
+          className=" rounded-full object-cover w-[40px] h-[40px]"
         />
         <span>{rowData.name}</span>
       </div>
