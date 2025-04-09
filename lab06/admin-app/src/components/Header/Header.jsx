@@ -1,9 +1,31 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
+  const getTitleFromPath = (path) => {
+    switch (path) {
+      case "/dashboard":
+        return "Dashboard";
+      case "/projects":
+        return "Projects";
+      case "/teams":
+        return "Teams";
+      case "/analytics":
+        return "Analytics";
+      case "/messages":
+        return "Messages";
+      case "/integrations":
+        return "Integrations";
+      default:
+        return "";
+    }
+  };
+  const title = getTitleFromPath(location.pathname);
+
   return (
     <div className="flex justify-between items-center px-4 py-3 border-b-1 !border-gray-200">
-      <span className="text-2xl font-extrabold text-[#f44b87]">Dashboard</span>
+      <span className="text-2xl font-extrabold text-[#f44b87]">{title}</span>
       <div className="flex items-start justify-evenly gap-4">
         <div className="relative rounded-md !bg-gray-100">
           <input

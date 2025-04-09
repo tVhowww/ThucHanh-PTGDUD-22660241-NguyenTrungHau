@@ -3,6 +3,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import "./DetailedReport.css";
 import EditModal from "../Modal/EditModal";
+import customerApi from "../../api/customerApi";
 
 export default function DetailedReport() {
   const [customers, setCustomers] = useState([]);
@@ -17,16 +18,7 @@ export default function DetailedReport() {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await import("../../data/data.json");
-        setCustomers(res.default.customers);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
+    customerApi.getAll().then(setCustomers).catch(console.error);
   }, []);
 
   const statusBodyTemplate = (rowData) => {
@@ -68,9 +60,20 @@ export default function DetailedReport() {
   };
 
   const actionBodyTemplate = (rowData) => {
+    const handleEditClick = async (id) => {
+      try {
+        const customerDetail = await customerApi.getById(id);
+        console.log("customerDetail", customerDetail);
+
+        setEditingCustomer(customerDetail);
+      } catch (error) {
+        console.error("Lỗi get api:", error);
+      }
+    };
+
     return (
       <button
-        onClick={() => setEditingCustomer(rowData)}
+        onClick={() => handleEditClick(rowData.id)}
         className="cursor-pointer hover:bg-amber-50 px-4 py-2 rounded-sm duration-200"
       >
         <img src="../src/assets/imgs/create.png" alt="edit" />

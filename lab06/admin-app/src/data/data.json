@@ -1,126 +1,125 @@
 {
-    "overviews": [
-        {
-            "id": 1,
-            "title": "Turnover",
-            "value": "$92.405",
-            "percentage": "5.39",
-            "icon": "../src/assets/imgs/btn-cart.png",
-            "color": "success",
-            "bgColor": "#fef0f5"
-        },
-        {
-            "id": 2,
-            "title": "Profit",
-            "value": "$32.218",
-            "percentage": "5.39",
-            "icon": "../src/assets/imgs/btn-money.png",
-            "color": "success",
-            "bgColor": "#f0f6ff"
-        },
-        {
-            "id": 2,
-            "title": "New customer",
-            "value": "298",
-            "percentage": "6.84",
-            "icon": "../src/assets/imgs/btn-user.png",
-            "color": "success",
-            "bgColor": "#f1f8fd"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Elizabeth Lee",
-            "company": "AvatarSystem",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "new",
-            "avatar": "../src/assets/imgs/customer-1.png"
-        },
-        {
-            "id": 2,
-            "name": "Carlos Garcia",
-            "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "new",
-            "avatar": "../src/assets/imgs/customer-2.png"
-        },
-        {
-            "id": 3,
-            "name": "Elizabeth Bailey",
-            "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
-            "status": "in_progress",
-            "avatar": "../src/assets/imgs/customer-3.png"
-        },
-        {
-            "id": 4,
-            "name": "Ryan Brown",
-            "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
-            "status": "in_progress",
-            "avatar": "../src/assets/imgs/customer-4.png"
-        },
-        {
-            "id": 5,
-            "name": "Ryan Young",
-            "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
-            "status": "completed",
-            "avatar": "../src/assets/imgs/customer-5.png"
-        },
-        {
-            "id": 6,
-            "name": "Hailey Adams",
-            "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "completed",
-            "avatar": "../src/assets/imgs/customer-6.png"
-        }
-    ],
-
-    "menu": [
-        {
-            "id": 1,
-            "path": "/dashboard",
-            "title": "Dashboard",
-            "icon": "../src/assets/imgs/menu-dashboard.png"
-        },
-        {
-            "id": 2,
-            "path": "/projects",
-            "title": "Project",
-            "icon": "../src/assets/imgs/menu-projects.png"
-        },
-        {
-            "id": 3,
-            "path": "/teams",
-            "title": "Teams",
-            "icon": "../src/assets/imgs/menu-teams.png"
-        },
-        {
-            "id": 4,
-            "path": "/analytics",
-            "title": "Analytics",
-            "icon": "../src/assets/imgs/menu-analytics.png"
-        },
-        {
-            "id": 5,
-            "path": "/messages",
-            "title": "Messages",
-            "icon": "../src/assets/imgs/menu-messages.png"
-        },
-        {
-            "id": 6,
-            "path": "/integrations",
-            "title": "Integrations",
-            "icon": "../src/assets/imgs/menu-integrations.png"
-        }
-    ]
+  "overviews": [
+    {
+      "id": "1",
+      "title": "Turnover",
+      "value": "$92.405",
+      "percentage": "5.39",
+      "icon": "../src/assets/imgs/btn-cart.png",
+      "color": "success",
+      "bgColor": "#fef0f5"
+    },
+    {
+      "id": "2",
+      "title": "Profit",
+      "value": "$32.218",
+      "percentage": "5.39",
+      "icon": "../src/assets/imgs/btn-money.png",
+      "color": "success",
+      "bgColor": "#f0f6ff"
+    },
+    {
+      "id": "2",
+      "title": "New customer",
+      "value": "298",
+      "percentage": "6.84",
+      "icon": "../src/assets/imgs/btn-user.png",
+      "color": "success",
+      "bgColor": "#f1f8fd"
+    }
+  ],
+  "customers": [
+    {
+      "name": "Elizabeth Lee",
+      "company": "AvatarSystem",
+      "orderValue": "$359",
+      "orderDate": "10/07/2023",
+      "avatar": "../src/assets/imgs/customer-1.png",
+      "status": "new",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Carlos Garcia",
+      "company": "SmoozeShift",
+      "orderValue": "$747",
+      "orderDate": "24/07/2023",
+      "status": "new",
+      "avatar": "../src/assets/imgs/customer-2.png"
+    },
+    {
+      "id": "3",
+      "name": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "orderValue": "$564",
+      "orderDate": "08/08/2023",
+      "status": "in_progress",
+      "avatar": "../src/assets/imgs/customer-3.png"
+    },
+    {
+      "id": "4",
+      "name": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "orderValue": "$541",
+      "orderDate": "31/08/2023",
+      "status": "in_progress",
+      "avatar": "../src/assets/imgs/customer-4.png"
+    },
+    {
+      "id": "5",
+      "name": "Ryan Young",
+      "company": "DataStream Inc.",
+      "orderValue": "$769",
+      "orderDate": "01/05/2023",
+      "status": "completed",
+      "avatar": "../src/assets/imgs/customer-5.png"
+    },
+    {
+      "id": "6",
+      "name": "Hailey Adams",
+      "company": "FlowRush",
+      "orderValue": "$922",
+      "orderDate": "10/06/2023",
+      "status": "completed",
+      "avatar": "../src/assets/imgs/customer-6.png"
+    }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "path": "/dashboard",
+      "title": "Dashboard",
+      "icon": "../src/assets/imgs/menu-dashboard.png"
+    },
+    {
+      "id": "2",
+      "path": "/projects",
+      "title": "Project",
+      "icon": "../src/assets/imgs/menu-projects.png"
+    },
+    {
+      "id": "3",
+      "path": "/teams",
+      "title": "Teams",
+      "icon": "../src/assets/imgs/menu-teams.png"
+    },
+    {
+      "id": "4",
+      "path": "/analytics",
+      "title": "Analytics",
+      "icon": "../src/assets/imgs/menu-analytics.png"
+    },
+    {
+      "id": "5",
+      "path": "/messages",
+      "title": "Messages",
+      "icon": "../src/assets/imgs/menu-messages.png"
+    },
+    {
+      "id": "6",
+      "path": "/integrations",
+      "title": "Integrations",
+      "icon": "../src/assets/imgs/menu-integrations.png"
+    }
+  ]
 }

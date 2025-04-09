@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import customerApi from "../../api/customerApi";
 
 export default function EditModal({ customer, onClose, onSave }) {
   const [formData, setFormData] = useState({
@@ -6,7 +7,7 @@ export default function EditModal({ customer, onClose, onSave }) {
     company: "",
     orderValue: "",
     orderDate: "",
-    image: "",
+    avatar: "",
     status: "",
   });
 
@@ -17,7 +18,7 @@ export default function EditModal({ customer, onClose, onSave }) {
         company: customer.company || "",
         orderValue: customer.orderValue || "",
         orderDate: customer.orderDate || "",
-        image: customer.avatar || "",
+        avatar: customer.avatar || "",
         status: customer.status || "",
       });
     }
@@ -47,13 +48,19 @@ export default function EditModal({ customer, onClose, onSave }) {
     return `${day}/${month}/${year}`;
   };
 
-  const handleSave = () => {
-    onSave({
-      ...customer,
-      ...formData,
-      orderDate: convertToDisplayDateFormat(formData.orderDate),
-    });
-    onClose();
+  const handleSave = async () => {
+    try {
+      const updatedCustomer = await customerApi.update(customer.id, {
+        ...formData,
+        orderDate: convertToDisplayDateFormat(formData.orderDate),
+      });
+
+      onSave(updatedCustomer);
+      onClose();
+    } catch (error) {
+      console.error("Lỗi khi cập nhật:", error);
+      alert("Đã xảy ra lỗi khi cập nhật khách hàng!");
+    }
   };
 
   if (!customer) return null;
@@ -69,7 +76,7 @@ export default function EditModal({ customer, onClose, onSave }) {
       >
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold mb-4">Edit Customer</h2>
-          <img src={formData.image} alt="avt" width={"50px"} />
+          <img src={formData.avatar} alt="avt" width={"50px"} />
         </div>
 
         {/* Name */}
