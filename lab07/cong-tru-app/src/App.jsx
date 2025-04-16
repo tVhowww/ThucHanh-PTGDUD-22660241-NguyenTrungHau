@@ -1,15 +1,13 @@
 import { Provider } from "react-redux";
 import "./App.css";
-import CongTruRedux from "./components/CongTruRedux/CongTruRedux";
-import store from "./redux/store";
+import CongTruReduxToolkit from "./components/CongTruReduxToolkit/CongTruReduxToolkit";
+import store from "./redux-toolkit/store";
 
 function App() {
   return (
     <>
-      {/* <CongTruReducer /> */}
-
       <Provider store={store}>
-        <CongTruRedux />
+        <CongTruReduxToolkit />
       </Provider>
     </>
   );
