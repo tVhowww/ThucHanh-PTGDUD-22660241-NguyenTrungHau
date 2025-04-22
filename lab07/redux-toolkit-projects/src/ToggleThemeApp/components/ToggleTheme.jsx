@@ -16,6 +16,7 @@ function ToggleTheme() {
         theme === "dark" ? "!bg-gray-800" : "!bg-white"
       }`}
     >
+      <h1>Toggle Theme App</h1>
       <span className={`${theme === "dark" ? "text-white" : "text-gray-700"}`}>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad id deleniti
         a obcaecati distinctio ut eaque nisi perferendis asperiores provident!

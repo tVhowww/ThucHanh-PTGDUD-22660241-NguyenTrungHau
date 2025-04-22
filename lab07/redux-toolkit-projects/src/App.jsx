@@ -3,6 +3,7 @@ import "./App.css";
 import Counter from "./CounterApp/components/Counter";
 import TodoList from "./TodoListApp/components/TodoList";
 import ToggleTheme from "./ToggleThemeApp/components/ToggleTheme";
+import Cart from "./CartManagementApp/components/Cart";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       {/* <Counter /> */}
       {/* <TodoList /> */}
       <ToggleTheme />
+      {/* <Cart /> */}
     </>
   );
 }
