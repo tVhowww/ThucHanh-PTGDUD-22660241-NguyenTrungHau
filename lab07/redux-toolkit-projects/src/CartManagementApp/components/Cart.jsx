@@ -27,10 +27,10 @@ function Cart() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 ">
       <h1>Cart Management App</h1>
       <div className="flex items-center justify-between gap-8">
-        <div className="border rounded-xl px-4 pt-8 pb-2 shadow-md">
+        <div className="border rounded-xl px-4 pt-8 pb-2 shadow-md ">
           <div className="flex flex-col items-center justify-center gap-3">
             <img src="../../../src/assets/react.svg" alt="product" />
             <span className="text-xl font-semibold">{productSample.title}</span>
@@ -49,7 +49,7 @@ function Cart() {
               <CartItem key={item.id} item={item} />
             ))}
           </div>
-          <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center p-4 border rounded-md !bg-gray-700">
+          <div className="flex justify-between items-center p-4 border rounded-md !bg-gray-700">
             <span className="text-2xl text-white font-bold">Total</span>
             <span className="text-red-500 text-2xl">
               {total.toLocaleString()} VND
